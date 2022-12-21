@@ -24,7 +24,9 @@ const ItemList = () => {
 
     return (
         <div>
+            
             <ItemComponents />
+            
         </div>
     )
 }
