@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import ItemFilter from '../ItemFilter/ItemFilter'
 
 const ItemComponents = () => {
     const products = useSelector((state) => state.allItems.items)
@@ -20,6 +21,7 @@ const ItemComponents = () => {
     })
     return (
         <>
+        <ItemFilter/>
             {renderItemList}
         </>
     )

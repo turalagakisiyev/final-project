@@ -3,11 +3,11 @@ import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import ItemFilter from '../../ItemFilter/ItemFilter'
 
-const Man = () => {
+const Woman = () => {
     const products = useSelector((state) => state.allItems.items)
     const renderItemList = products.map((products) => {
         const { id, title, price, category, image } = products
-        if (category === `men's clothing`) {
+        if (category === `electronics`) {
             return (
                 <div key={id}>
                     <Link to={`/product/${id}`}>
@@ -24,10 +24,10 @@ const Man = () => {
     })
     return (
         <>
-        <ItemFilter/>
+            <ItemFilter />
             {renderItemList}
         </>
     )
 }
 
-export default Man
+export default Woman

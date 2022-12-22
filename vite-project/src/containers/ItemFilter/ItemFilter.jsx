@@ -8,8 +8,8 @@ const itemFilter = () => {
             <button><Link to='/'>All</Link></button>
             <button><Link to='/man-clothing'>man</Link></button>
             <button><Link to='/jawelery'>jawelery</Link></button>
-            <button>3</button>
-            <button>4</button>
+            <button><Link to='/electronics'>electronics</Link></button>
+            <button><Link to='/women-clothing'>women's clothing</Link></button>
         </div>
     )
 }
