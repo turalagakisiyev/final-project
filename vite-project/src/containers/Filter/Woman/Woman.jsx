@@ -2,6 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import ItemFilter from '../../ItemFilter/ItemFilter'
+import './Woman.css'
 
 
 const Woman = () => {
@@ -11,12 +12,18 @@ const Woman = () => {
         if (category === `women's clothing`) {
             return (
                 <div key={id}>
-                    <Link to={`/product/${id}`}>
-                        <div><img src={image} alt="itemImage" /></div>
-                        <div>{title}</div>
-                        <div>{price}₼</div>
-                        <div>{category}</div>
-                    </Link>
+                    <div className='Woman-product' >
+
+                        <Link style={{ textDecoration: "none" }} to={`/product/${id}`}><div className='Woman-product-image' >
+                            <img src={image} alt="itemImage" /><div className='Woman-product-price'><i className="fa-solid fa-manat-sign">   {price}</i>  </div>
+                        </div></Link>
+                        <Link style={{ textDecoration: "none" }} to={`/product/${id}`}><div className='Woman-product-info'>
+                            <div>{title}</div>
+
+                        </div></Link>
+
+
+                    </div>
                 </div>
             )
         }
@@ -26,11 +33,11 @@ const Woman = () => {
     return (
         <>
             <ItemFilter />
-            {renderItemList}
+            <div className='Woman'>{renderItemList}</div>
         </>
     )
 
- 
+
 }
 
 export default Woman

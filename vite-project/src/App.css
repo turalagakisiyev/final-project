@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    min-width: 340px;
+    background: rgb(17, 109, 85);
+    background: radial-gradient(circle,
+            rgb(17, 109, 85) 0%,
+            rgb(90, 218, 156) 0%,
+            rgb(16, 59, 43) 100%);
+}

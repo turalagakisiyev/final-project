@@ -8,6 +8,8 @@ import Man from './containers/Filter/Man/Man'
 import Jawelery from './containers/Filter/Jawelery/Jawelery'
 import Woman from './containers/Filter/Woman/Woman'
 import Electronic from './containers/Filter/Electronic/Electronic'
+import './App.css'
+import Complete from './containers/Complete/Complete'
 
 const App = () => {
   return (
@@ -23,6 +25,7 @@ const App = () => {
         <Route path="/women-clothing" element={<Woman />} />
         <Route path="/product/:productId" element={<ItemDetails />} />
         <Route path="/form-page" element={<FormPage />} />
+        <Route path="/form-page-complete" element={<Complete />} />
         <Route>Error</Route>
 
       </Routes>

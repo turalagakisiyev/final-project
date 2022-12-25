@@ -3,12 +3,13 @@ import { Link, useParams } from 'react-router-dom'
 import axios from 'axios'
 import { useDispatch, useSelector } from 'react-redux'
 import { selectedItems, removeSelectedItems } from '../../redux/actions/itemAction'
+import "./ItemDetails.css"
 
 const ItemDetails = () => {
 
   const itemId = useParams()
   const product = useSelector((state) => state.item)
-  const { description, image } = product
+  const { description, image, title, price } = product
   const dispatch = useDispatch()
   const getItemsDetails = async () => {
     const response = await axios
@@ -29,17 +30,40 @@ const ItemDetails = () => {
   }, [itemId])
 
   return (
-    <div>
-      <div>
-        <img src={image} />
-      </div>
-      <div>
-        <p>{description}</p>
-      </div>
-      <div>
-        <button><Link to="/form-page">Buy</Link></button>
-      </div>
-    </div>
+    <div style={{
+      display: "flex",
+      justifyContent: "center",
+      padding: "2%"
+    }}><div className='ItemDetails'>
+
+        <div className='ItemDetails-image'>
+          <img src={image} />
+        </div>
+
+
+
+        <div className='ItemDetails-right'>
+
+
+          <Link to='/'>
+            <button className='ItemDetails-right-back' onClick={() => {
+              window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+            }}><i className="fa-solid fa-arrow-left"></i></button>
+          </Link>
+
+          <div style={{ fontSize: "large", fontWeight: "bold" }}>{title}</div>
+
+          <div>{description}</div>
+          <div className='ItemDetails-right-buy'><div className='ItemDetails-right-price'><i className="fa-solid fa-manat-sign">     {price}</i></div>
+
+            <div>
+              <Link to="/form-page"><button className='btn'></button></Link>
+            </div></div>
+
+
+        </div>
+      </div></div>
+
 
   )
 }

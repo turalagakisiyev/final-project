@@ -1,0 +1,62 @@
+.Man {
+    padding: 2%;
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+    grid-template-columns: auto auto auto;
+    justify-content: space-around;
+
+}
+
+.Man-product {
+    border-radius: 20px;
+    text-align: center;
+    width: 380px;
+    height: 420px;
+    transition: transform .1s;
+    background-color: white;
+    transform: scale(1);
+}
+
+.Man-product:hover {
+    transform: scale(1.1);
+}
+
+
+.Man-product-image {
+    width: 350px;
+    height: 350px;
+    margin: auto;
+    position: relative;
+
+
+}
+.Man-product-price{
+    position:absolute;
+    background-color: red;
+    width: 80px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:  0  0 15px  15px  ;
+    
+    
+    
+}
+
+
+
+.Man-product-image img {
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
+}
+
+.Man-product-info {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
