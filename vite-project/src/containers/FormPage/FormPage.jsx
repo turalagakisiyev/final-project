@@ -4,21 +4,50 @@ import "./FormPage.css";
 
 function Formpage() {
   return (
-    <section className="component">
+    <div className="wrapper">
+      <div className="container1">
+        <div className="title">Checkout Form</div>
 
-      <div className="credit-card">
-        <h2>CREDIT CARD</h2>
-        <form>
-          <input required type="text" placeholder="NAME" />
-          <div className="line"><input required type="number" placeholder="- - - -" /> <input required type="number" placeholder="- - - -" /> <input required type="number" placeholder="- - - -" /> <input required type="number" placeholder="- - - -" /></div>
-          <div className="line">
-            <input required style={{ letterSpacing: "1px" }} className="litle" type="text" placeholder="EXPIRY" />
-            <input required className="tall" type="number" placeholder="CCV" />
+        <div className="input-form">
+          <div className="section-1">
+            <div className="items">
+              <label className="label">card number</label>
+              <input type="text" className="input" maxLength="16" data-mask="0000 0000 0000 0000" placeholder="XXXX  XXXX  XXXX   XXXX" />
+            </div>
           </div>
-          <Link to="/form-page-complete "><button type="submit" className="valid-button"><i className="fa-solid fa-bag-shopping">    CH ECK  OUT</i></button></Link>
-        </form>
+          <div className="section-2">
+            <div className="items">
+              <label className="label">card holder</label>
+              <input type="text" className="input" placeholder="Coding Market" />
+            </div>
+          </div>
+          <div className="section-3">
+            <div className="items">
+              <label className="label">Expire date</label>
+              <input type="text" className="input" data-mask="00 / 00" placeholder="MM / YY" />
+            </div>
+            <div className="items">
+              <div className="cvc">
+                <label className="label">cvc code</label>
+                <div className="tooltip">?
+                  <div className="cvc-img"><img src="https://i.imgur.com/r8oXtry.png" alt="" /></div>
+                </div>
+              </div>
+              <input type="text" className="input" data-mask="0000" placeholder="0000" />
+            </div>
+          </div>
+        </div>
+
+        <div className="btn1"><Link to='/form-page-complete'><i className="fa-solid fa-circle-check">CHECKOUT</i></Link> </div>
+
       </div>
-    </section>
+    </div>
+
+
+
+
+
+
 
   )
 }

@@ -16,6 +16,7 @@
     transition: transform .1s;
     background-color: white;
     transform: scale(1);
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .Man-product:hover {
